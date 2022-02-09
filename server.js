@@ -2,7 +2,7 @@ const express = require('express');
 const db = require('./db/connection');
 const apiRoutes = require('./routes/apiRoutes');
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 const app = express();
 
 // Express middleware
@@ -20,7 +20,7 @@ app.use((req, res) => {
 // Start server after DB connection
 db.connect(err => {
   if (err) throw err;
-  console.log('Database connected.');
+  console.log('Now Connected to DataBase');
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });

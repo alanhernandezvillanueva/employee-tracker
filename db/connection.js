@@ -1,18 +1,16 @@
 const mysql = require('mysql2');
-const mysql = require('mysql');
-const inquirer = require('inquirer');
-const cTable = require('console.table');
 
+// connect to database
+const db = mysql.createConnection(
+    {
+        host: 'localhost',
+        // Your mysql username,
+        user: 'root',
+        // Your mysql password
+        password: 'Tracy123!',
+        database: 'employee_tracker'
+    },
+    console.log('Connected to the employees database.')
+);
 
-const connection = mysql.createConnection({
-    host: 'localhost',
-    port: 3306,
-    user: 'root',
-    password: '',
-    database: 'employee_tracker',
-});
-
-
-
-
-  module.exports = db;
+module.exports = db;
