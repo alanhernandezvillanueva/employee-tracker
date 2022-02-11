@@ -122,10 +122,10 @@ async function startQuestions() {
             },
             {
                 type: 'input',
-                name: 'managerName',
+                name: 'managerID',
                 message: "What is the Manager's name? (Required)",
-                validate: managerName => {
-                    if (managerName) {
+                validate: managerID => {
+                    if (managerID) {
                         return true;
                     } else {
                         console.log("Please enter the manager's name!")
@@ -329,7 +329,7 @@ const addRole = () => {
 // create a new employee in data base 
 const addEmployee = () => {
 
-    const params = [employees[employees.length-1].newEmployeeFirstName, employees[employees.length-1].newEmployeeLastName, employees[employees.length-1].roleID, employees[employees.length-1].managerName, employees[employees.length-1].departmentID];
+    const params = [employees[employees.length-1].newEmployeeFirstName, employees[employees.length-1].newEmployeeLastName, employees[employees.length-1].roleID, employees[employees.length-1].managerID, employees[employees.length-1].departmentID];
     
     db.query(`INSERT INTO employee (first_name, last_name, role_id, manager_name, department_id)
     VALUES (?, ?, ?, ?, ?)`, params, (err, res) => {

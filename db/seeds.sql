@@ -26,6 +26,13 @@ VALUES
 ('Lizeth', 'Hernandez', 4, 'Erika Tornez', 3),
 ('Alejandro', 'Hernandez', 5, 'Rosa Villanueva', 3);
 
+INSERT INTO manager (first_name, last_name)
+VALUES
+('Karen', 'Juarez'),
+('Mariah', 'Carey'),
+('Erika', 'Tornez'),
+('Rosa', 'Villanueva');
+
   
 
  
